@@ -148,6 +148,29 @@ def test_json_output_is_sorted_and_stable(tmp_path):
     assert assess.render_markdown(r) == assess.render_markdown(result_of(make_cases.clean(), tmp_path, "third"))
 
 
+def test_unhashable_use_domain_is_bad_input_not_a_crash(tmp_path):
+    import pytest
+    for i, bad in enumerate((["education"], {"a": 1})):
+        case = make_cases.clean()
+        case.profile["use_domain"] = bad
+        with pytest.raises(assess.BadInput):
+            result_of(case, tmp_path, "bad%d" % i)
+
+
+def test_deeply_nested_json_is_a_value_error_not_a_crash():
+    import pytest
+    with pytest.raises(ValueError):
+        assess.parse_json("[" * 100000 + "]" * 100000)
+
+
+def test_decisions_row_with_extra_field_is_malformed():
+    reasons = []
+    rows = b"".join(b"A,1,1,extra\n" for _ in range(10)) + b"".join(b"B,1,0\n" for _ in range(10))
+    got = assess.measure_bias({"decisions.csv": b"group,qualified,selected\n" + rows}, reasons)
+    assert got is None
+    assert reasons and reasons[0].startswith("M_MALFORMED")
+
+
 def test_assessed_at_is_the_given_time(tmp_path):
     assert result_of(make_cases.clean(), tmp_path)["assessed_at"] == make_cases.NOW
     assert NOW.tzinfo is not None

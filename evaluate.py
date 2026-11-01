@@ -47,6 +47,9 @@ def run_case(name):
 
 
 def main():
+    if len(sys.argv) > 1:
+        print("usage: python3 evaluate.py (takes no arguments)", file=sys.stderr)
+        return 2
     names = sorted(n for n in os.listdir(CASES) if os.path.isdir(os.path.join(CASES, n)))
     matched, rows = 0, []
     print("| case | expected | got | match |")

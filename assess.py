@@ -76,7 +76,10 @@ def _const(name: str) -> Any:
 
 
 def parse_json(text: str) -> Any:
-    return json.loads(text, object_pairs_hook=_pairs, parse_constant=_const)
+    try:
+        return json.loads(text, object_pairs_hook=_pairs, parse_constant=_const)
+    except RecursionError:
+        raise ValueError("nesting too deep")
 
 
 def parse_ts(value: Any) -> Optional[datetime]:
@@ -160,7 +163,7 @@ def validate_profile(profile: Any, fw: Dict[str, Any]) -> None:
             domains |= set(rule["basis"])
         if rule["field"] == "practices":
             practices |= set(rule["basis"])
-    if profile.get("use_domain") not in domains:
+    if not isinstance(profile.get("use_domain"), str) or profile["use_domain"] not in domains:
         raise BadInput("profile.use_domain must be one of " + ", ".join(sorted(domains)))
     pr = profile.get("practices")
     if not isinstance(pr, list) or not all(isinstance(x, str) and x in practices for x in pr):
@@ -348,7 +351,7 @@ def measure_bias(files: Dict[str, bytes], reasons: List[str]) -> Optional[Dict[s
     stats: Dict[str, List[int]] = {}
     for i, row in enumerate(reader, start=2):
         g, q, s = row.get("group"), row.get("qualified"), row.get("selected")
-        if not g or not g.strip() or q not in ("0", "1") or s not in ("0", "1") or None in row.values():
+        if not g or not g.strip() or q not in ("0", "1") or s not in ("0", "1") or None in row or None in row.values():
             reasons.append("M_MALFORMED: decisions.csv line %d is not group,0|1,0|1" % i)
             return None
         st = stats.setdefault(g, [0, 0, 0, 0])  # n, selected, qualified, true positives

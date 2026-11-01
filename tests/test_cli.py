@@ -43,6 +43,15 @@ def test_argument_errors_exit_two():
     assert cli([p, e, "--bogus"]).returncode == 2
 
 
+def test_evaluate_rejects_arguments_with_exit_two():
+    import subprocess
+    import sys
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "evaluate.py"), "--bogus"],
+                       capture_output=True, text=True)
+    assert r.returncode == 2
+    assert "usage" in r.stderr
+
+
 def test_help_exits_zero():
     assert cli(["--help"]).returncode == 0
 
