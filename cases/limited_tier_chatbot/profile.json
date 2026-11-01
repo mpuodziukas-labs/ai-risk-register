@@ -1,0 +1,65 @@
+{
+  "controls": [
+    {
+      "evidence_files": [
+        "control_bias_review.json"
+      ],
+      "id": "CTL-01",
+      "reduces_likelihood_by": 1,
+      "risk": "model_bias",
+      "title": "Pre-release fairness review"
+    },
+    {
+      "evidence_files": [
+        "control_pii_filter.json"
+      ],
+      "id": "CTL-02",
+      "reduces_likelihood_by": 1,
+      "risk": "data_leakage",
+      "title": "Output PII filter"
+    },
+    {
+      "evidence_files": [
+        "control_injection_guard.json"
+      ],
+      "id": "CTL-03",
+      "reduces_likelihood_by": 1,
+      "risk": "prompt_injection",
+      "title": "Untrusted input isolation"
+    }
+  ],
+  "data_sources": [
+    "synthetic application records",
+    "synthetic job descriptions"
+  ],
+  "deployment": "internal web service, human reviewer in the loop",
+  "intended_use": "Shortlisting support, never an automatic rejection",
+  "interacts_with_persons": true,
+  "model_type": "text classifier plus language model summarizer",
+  "name": "Synthetic resume screening assistant",
+  "practices": [],
+  "purpose": "Rank synthetic applications for recruiter review",
+  "risk_register": {
+    "data_leakage": {
+      "impact": 4,
+      "owner": "Data Protection Officer",
+      "treatment": "mitigate"
+    },
+    "model_bias": {
+      "impact": 4,
+      "owner": "Head of Model Risk",
+      "treatment": "mitigate"
+    },
+    "prompt_injection": {
+      "impact": 3,
+      "owner": "Security Engineering Lead",
+      "treatment": "mitigate"
+    }
+  },
+  "system_id": "synthetic-screening-assistant",
+  "use_domain": "other",
+  "users": [
+    "recruiters",
+    "hiring managers"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "bands": [[1, 4, "low"], [5, 9, "medium"], [10, 16, "high"], [17, 25, "critical"]],
+  "common": {
+    "eu_ai_act": ["Art. 9(1)"],
+    "nist_ai_rmf": ["GOVERN 2.1", "MAP 1.5", "MANAGE 1.2", "MANAGE 1.3", "MANAGE 4.1"]
+  },
+  "families": {
+    "data_leakage": {
+      "eu_ai_act": ["Art. 15(1)"],
+      "iso_42001": ["ISO/IEC 42001 (clause not verified from public text)"],
+      "nist_ai_rmf": ["MEASURE 2.10", "MEASURE 2.7"],
+      "owasp_llm_2025": ["LLM02:2025"],
+      "risk_id": "R2",
+      "title": "Data leakage: PII, secrets or canary strings in model output or training data"
+    },
+    "model_bias": {
+      "eu_ai_act": ["Art. 10(2)(f)", "Art. 10(2)(g)"],
+      "iso_42001": ["ISO/IEC 42001 (clause not verified from public text)"],
+      "nist_ai_rmf": ["MEASURE 2.11", "MEASURE 1.1"],
+      "owasp_llm_2025": [],
+      "risk_id": "R1",
+      "title": "Model bias: disparate selection rates and unequal opportunity across groups"
+    },
+    "prompt_injection": {
+      "eu_ai_act": ["Art. 15(1)"],
+      "iso_42001": ["ISO/IEC 42001 (clause not verified from public text)"],
+      "nist_ai_rmf": ["MEASURE 2.7"],
+      "owasp_llm_2025": ["LLM01:2025"],
+      "risk_id": "R3",
+      "title": "Prompt injection: crafted input changes model behavior in unintended ways"
+    }
+  },
+  "tier_rules": [
+    {
+      "basis": {
+        "emotion_inference_workplace": "Art. 5(1)(f)",
+        "social_scoring": "Art. 5(1)(c)",
+        "subliminal_manipulation": "Art. 5(1)(a)"
+      },
+      "field": "practices",
+      "tier": "prohibited"
+    },
+    {
+      "basis": {
+        "biometrics": "Annex III area 1",
+        "critical_infrastructure": "Annex III area 2",
+        "education": "Annex III area 3",
+        "employment": "Annex III area 4",
+        "essential_services": "Annex III area 5",
+        "justice": "Annex III area 8",
+        "law_enforcement": "Annex III area 6",
+        "migration": "Annex III area 7"
+      },
+      "field": "use_domain",
+      "tier": "high_risk"
+    },
+    {
+      "basis": {"true": "Art. 50(1)"},
+      "field": "interacts_with_persons",
+      "tier": "limited_transparency"
+    },
+    {"basis": {}, "field": null, "tier": "minimal"}
+  ]
+}

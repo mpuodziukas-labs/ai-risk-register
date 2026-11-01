@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE R_ACCEPT_ABOVE_APPETITE",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "accepting a residual score of 16"
+}

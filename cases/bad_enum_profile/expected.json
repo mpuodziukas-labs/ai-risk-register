@@ -1,0 +1,5 @@
+{
+  "expect": "BAD_INPUT",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "use_domain outside the known list"
+}

@@ -1,0 +1,64 @@
+{
+  "files": {
+    "bias_report.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "c0951e690d8ad733a3d76a04d8e20e3ca11efe522088350f719a42114b666fd1"
+    },
+    "canaries.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "9596d086435a1c437e59cbff12e6c8d5d197a79b93c4c19f4dd64be5a7a163dd"
+    },
+    "control_bias_review.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "8a82ef08604e3b3b63aa9a58672bf141a7146bfb32b4aec7f06565b2bf1edc13"
+    },
+    "control_injection_guard.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "8a82ef08604e3b3b63aa9a58672bf141a7146bfb32b4aec7f06565b2bf1edc13"
+    },
+    "control_pii_filter.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "8a82ef08604e3b3b63aa9a58672bf141a7146bfb32b4aec7f06565b2bf1edc13"
+    },
+    "decisions.csv": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "78be960320993d9ecebf1f2567882e7f737fbf015dcfd3678435e3aafaa099e2"
+    },
+    "injection_report.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "d4a6986e08b93e97e04f92a0b89719e424d5cf0c3ad61b324f5c2254c62603a8"
+    },
+    "leakage_report.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "19d30b96303c3c2d7c198d881425bdef48e7f4e18acc7ce04fdc68a599cfc3ad"
+    },
+    "model_outputs.jsonl": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "8ffd726b2085275422087ec5af11d97368e5bf8c488731fd2b79f6b4081ae534"
+    },
+    "probes.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "8ae10372cc1b013935faa339e61c058bb79335fbd966d9aa61971160e92d1463"
+    },
+    "training_manifest.json": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "1f0d698d78962b1888e373ec61f90ca2809968cdcf82754ff1e41ff9c3140881"
+    },
+    "transcript.jsonl": {
+      "max_age_days": 30,
+      "recorded_at": "2026-03-05T00:00:00Z",
+      "sha256": "ec9e6b09e42f9bf4d41c645c93f92c3d07e22773b80163b52183833e2a3e6cc3"
+    }
+  }
+}

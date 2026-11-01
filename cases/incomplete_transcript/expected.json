@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE M_INCOMPLETE",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "a probe has no recorded response"
+}

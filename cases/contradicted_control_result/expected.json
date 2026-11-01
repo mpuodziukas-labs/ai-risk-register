@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE E_CONTRADICTED",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "control claimed effective but its evidence records fail"
+}

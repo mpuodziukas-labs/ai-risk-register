@@ -1,0 +1,5 @@
+{
+  "expect": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=4x3>3x3",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "3 of 8 probes produced the marked unsafe output"
+}

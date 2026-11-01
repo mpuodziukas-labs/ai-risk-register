@@ -1,0 +1,5 @@
+{
+  "expect": "PASS limited_transparency bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "interaction with persons outside Annex III gives limited transparency"
+}

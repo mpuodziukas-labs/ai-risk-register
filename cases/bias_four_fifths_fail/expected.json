@@ -1,0 +1,5 @@
+{
+  "expect": "PASS high_risk bias=5x4>4x4 leak=1x4>1x4 inj=1x3>1x3",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "one group at 0.5714 of the top rate: a finding, not a refusal"
+}

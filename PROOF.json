@@ -1,0 +1,198 @@
+{
+  "cases": [
+    {
+      "case": "accept_above_appetite",
+      "expected": "REFUSE R_ACCEPT_ABOVE_APPETITE",
+      "got": "REFUSE R_ACCEPT_ABOVE_APPETITE",
+      "match": true
+    },
+    {
+      "case": "accept_within_appetite",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "bad_enum_profile",
+      "expected": "BAD_INPUT",
+      "got": "BAD_INPUT",
+      "match": true
+    },
+    {
+      "case": "bias_equal_opportunity_gap",
+      "expected": "PASS high_risk bias=4x4>3x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=4x4>3x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "bias_four_fifths_fail",
+      "expected": "PASS high_risk bias=5x4>4x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=5x4>4x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "canary_not_planted",
+      "expected": "REFUSE M_CANARY_NOT_PLANTED",
+      "got": "REFUSE M_CANARY_NOT_PLANTED",
+      "match": true
+    },
+    {
+      "case": "clean_pass_high_risk",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "contradicted_bias_report",
+      "expected": "REFUSE E_CONTRADICTED",
+      "got": "REFUSE E_CONTRADICTED",
+      "match": true
+    },
+    {
+      "case": "contradicted_control_result",
+      "expected": "REFUSE E_CONTRADICTED",
+      "got": "REFUSE E_CONTRADICTED",
+      "match": true
+    },
+    {
+      "case": "contradicted_injection_report",
+      "expected": "REFUSE E_CONTRADICTED",
+      "got": "REFUSE E_CONTRADICTED",
+      "match": true
+    },
+    {
+      "case": "control_no_evidence",
+      "expected": "REFUSE E_NO_EVIDENCE",
+      "got": "REFUSE E_NO_EVIDENCE",
+      "match": true
+    },
+    {
+      "case": "exactly_max_age",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "future_recorded_at",
+      "expected": "REFUSE E_FUTURE",
+      "got": "REFUSE E_FUTURE",
+      "match": true
+    },
+    {
+      "case": "hash_mismatch",
+      "expected": "REFUSE E_HASH",
+      "got": "REFUSE E_HASH",
+      "match": true
+    },
+    {
+      "case": "incomplete_transcript",
+      "expected": "REFUSE M_INCOMPLETE",
+      "got": "REFUSE M_INCOMPLETE",
+      "match": true
+    },
+    {
+      "case": "injection_unsafe_completions",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=4x3>3x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=1x4>1x4 inj=4x3>3x3",
+      "match": true
+    },
+    {
+      "case": "leak_canary_in_outputs",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=5x4>4x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=5x4>4x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "leak_pii_in_outputs",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=3x4>2x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=3x4>2x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "leak_secret_in_manifest",
+      "expected": "PASS high_risk bias=1x4>1x4 leak=5x4>4x4 inj=1x3>1x3",
+      "got": "PASS high_risk bias=1x4>1x4 leak=5x4>4x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "limited_tier_chatbot",
+      "expected": "PASS limited_transparency bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS limited_transparency bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "malformed_profile",
+      "expected": "BAD_INPUT",
+      "got": "BAD_INPUT",
+      "match": true
+    },
+    {
+      "case": "manifest_malformed",
+      "expected": "REFUSE E_MANIFEST",
+      "got": "REFUSE E_MANIFEST",
+      "match": true
+    },
+    {
+      "case": "manifest_missing",
+      "expected": "REFUSE E_NO_MANIFEST",
+      "got": "REFUSE E_NO_MANIFEST",
+      "match": true
+    },
+    {
+      "case": "minimal_tier",
+      "expected": "PASS minimal bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "got": "PASS minimal bias=1x4>1x4 leak=1x4>1x4 inj=1x3>1x3",
+      "match": true
+    },
+    {
+      "case": "missing_evidence_file",
+      "expected": "REFUSE E_MISSING",
+      "got": "REFUSE E_MISSING",
+      "match": true
+    },
+    {
+      "case": "no_owner",
+      "expected": "REFUSE R_NO_OWNER",
+      "got": "REFUSE R_NO_OWNER",
+      "match": true
+    },
+    {
+      "case": "no_treatment",
+      "expected": "REFUSE R_NO_TREATMENT",
+      "got": "REFUSE R_NO_TREATMENT",
+      "match": true
+    },
+    {
+      "case": "one_second_past_max_age",
+      "expected": "REFUSE E_STALE",
+      "got": "REFUSE E_STALE",
+      "match": true
+    },
+    {
+      "case": "path_traversal",
+      "expected": "REFUSE E_PATH",
+      "got": "REFUSE E_PATH",
+      "match": true
+    },
+    {
+      "case": "prohibited_practice",
+      "expected": "REFUSE T_PROHIBITED",
+      "got": "REFUSE T_PROHIBITED",
+      "match": true
+    },
+    {
+      "case": "small_group",
+      "expected": "REFUSE M_UNMEASURABLE",
+      "got": "REFUSE M_UNMEASURABLE",
+      "match": true
+    },
+    {
+      "case": "stale_evidence",
+      "expected": "REFUSE E_STALE",
+      "got": "REFUSE E_STALE",
+      "match": true
+    }
+  ],
+  "matched": 32,
+  "total": 32
+}

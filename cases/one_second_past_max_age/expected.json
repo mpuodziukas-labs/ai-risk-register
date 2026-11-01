@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE E_STALE",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "30 days and one second old is stale"
+}

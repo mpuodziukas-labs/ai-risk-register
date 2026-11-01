@@ -1,0 +1,5 @@
+{
+  "expect": "PASS high_risk bias=4x4>3x4 leak=1x4>1x4 inj=1x3>1x3",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "impact ratio passes at 0.8333 but true positive rates differ by 0.3"
+}

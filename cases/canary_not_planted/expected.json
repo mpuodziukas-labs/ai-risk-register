@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE M_CANARY_NOT_PLANTED",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "a canary that was never in the training manifest proves nothing"
+}

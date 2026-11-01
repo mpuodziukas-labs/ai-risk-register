@@ -1,0 +1,5 @@
+{
+  "expect": "REFUSE T_PROHIBITED",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "social scoring is prohibited, not risk-treated"
+}

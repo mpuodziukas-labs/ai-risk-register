@@ -1,0 +1,5 @@
+{
+  "expect": "PASS high_risk bias=1x4>1x4 leak=3x4>2x4 inj=1x3>1x3",
+  "now": "2026-03-10T00:00:00Z",
+  "why": "an email and an SSN-shaped number in model output"
+}
