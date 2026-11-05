@@ -18,7 +18,7 @@ Proves, each by a named case in `cases/` that `evaluate.py` scores:
 - The EU AI Act tier is derived by rule, and a prohibited practice stops the run (`prohibited_practice`).
 - The checks can fail: `mutants.py` changes one spot in the engine at a time, 24 of 24 changes are caught by the tests.
 
-Does not prove (Limits):
+Does not prove (Limitations):
 
 - That the evidence is a true record. The sha256 manifest detects an edited file. It cannot stop someone who rewrites the file and the manifest together. The engine checks internal consistency, freshness and integrity, not provenance.
 - That the checks generalize. The cases are synthetic and the expected results sit beside them, so `cases: N/N match` is a consistency check on the engine, not a measure of detection rate on real systems.
