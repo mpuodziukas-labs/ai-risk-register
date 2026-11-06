@@ -48,3 +48,17 @@ Source caveat: EUR-Lex returned no page content to the fetch tool in four URL va
 ## ISO/IEC 42001
 
 The iso.org page returned HTTP 403 and the Annex A text is paywalled. No clause or control id is cited. The crosswalk column prints "ISO/IEC 42001 (clause not verified from public text)".
+
+## Crosswalk sources (fetched 2026-11-05)
+
+Used by `crosswalk.tsv`. Fetched text was treated as data.
+
+| framework | URL | result |
+|---|---|---|
+| EU AI Act Art. 9 | https://artificialintelligenceact.eu/article/9/ | fetched; paragraph 1, 2(a) to 2(d), 5 confirmed. Secondary mirror, not checked against EUR-Lex |
+| EU AI Act Annex IV | https://artificialintelligenceact.eu/annex/4/ | fetched; items 1 to 9 and sub-points confirmed. Secondary mirror |
+| EU AI Act (official) | https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689 and https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng | returned no content |
+| SR 11-7 attachment | https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf | fetched PDF, text read; sections V.1 Evaluation of Conceptual Soundness, V.2 Ongoing Monitoring, V.3 Outcomes Analysis, VI Governance, Policies, and Controls, Model Inventory, Documentation confirmed |
+| SR 11-7 letter | https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107.htm | fetched; title "Guidance on Model Risk Management", April 4, 2011. The supervisionreg/srletters/sr1107.htm and sr1107a1.pdf URLs returned HTTP 404 |
+| SOC 2 TSC | https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022 | fetched landing page only; criteria PDF needs a free account; no CC id confirmed, all SOC 2 rows INFERRED |
+| ISO/IEC 27001:2022 Annex A | none | paywalled; control ids only, all rows INFERRED |

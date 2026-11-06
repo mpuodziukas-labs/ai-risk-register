@@ -1,0 +1,63 @@
+register_control_or_risk_id	framework	external_id	external_title_paraphrase	source_url	status
+R1	SR 11-7	V.1 Evaluation of Conceptual Soundness	review of model design and the evidence behind the chosen methods (bias metrics are documented in README and frameworks.json)	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R2	SR 11-7	V.1 Evaluation of Conceptual Soundness	review of model design and the evidence behind the chosen methods (leakage patterns are fixed and documented)	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R3	SR 11-7	V.1 Evaluation of Conceptual Soundness	review of model design and the evidence behind the chosen methods (probe and unsafe-pattern design is documented)	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R1	SR 11-7	V.3 Outcomes Analysis	comparison of outputs with expected outcomes; here the 32 evaluation cases compare computed bias results with expected.json	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R2	SR 11-7	V.3 Outcomes Analysis	comparison of outputs with expected outcomes; here the 32 evaluation cases compare computed leakage results with expected.json	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R3	SR 11-7	V.3 Outcomes Analysis	comparison of outputs with expected outcomes; here the 32 evaluation cases compare computed injection results with expected.json	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+CTL-01	SR 11-7	V.2 Ongoing Monitoring	confirm the model keeps performing as intended; here control evidence must be fresh (max_age_days) and not record a failure	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+CTL-02	SR 11-7	V.2 Ongoing Monitoring	confirm the model keeps performing as intended; here control evidence must be fresh (max_age_days) and not record a failure	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+CTL-03	SR 11-7	V.2 Ongoing Monitoring	confirm the model keeps performing as intended; here control evidence must be fresh (max_age_days) and not record a failure	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R1	SR 11-7	VI Governance, Policies, and Controls	defined roles and responsibilities; each register row needs an owner and a treatment or the run refuses	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R2	SR 11-7	VI Governance, Policies, and Controls	defined roles and responsibilities; each register row needs an owner and a treatment or the run refuses	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R3	SR 11-7	VI Governance, Policies, and Controls	defined roles and responsibilities; each register row needs an owner and a treatment or the run refuses	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+profile:system_id	SR 11-7	VI Model Inventory	set of information kept per model; partial, this repo holds one system record and no cross-system inventory	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+profile:intended_use	SR 11-7	VI Documentation	documented purpose, limits and assumptions of a model; partial, covers intended use only	https://www.federalreserve.gov/boarddocs/srletters/2011/sr1107a1.pdf	GROUNDED
+R1	EU AI Act	Art. 9(2)(a)	identify and analyse known and foreseeable risks to health, safety or fundamental rights	https://artificialintelligenceact.eu/article/9/	INFERRED
+R2	EU AI Act	Art. 9(2)(a)	identify and analyse known and foreseeable risks to health, safety or fundamental rights	https://artificialintelligenceact.eu/article/9/	INFERRED
+R3	EU AI Act	Art. 9(2)(a)	identify and analyse known and foreseeable risks to health, safety or fundamental rights	https://artificialintelligenceact.eu/article/9/	INFERRED
+R1	EU AI Act	Art. 9(2)(b)	estimate and evaluate risks under intended use; here likelihood x impact inherent score	https://artificialintelligenceact.eu/article/9/	INFERRED
+R2	EU AI Act	Art. 9(2)(b)	estimate and evaluate risks under intended use; here likelihood x impact inherent score	https://artificialintelligenceact.eu/article/9/	INFERRED
+R3	EU AI Act	Art. 9(2)(b)	estimate and evaluate risks under intended use; here likelihood x impact inherent score	https://artificialintelligenceact.eu/article/9/	INFERRED
+CTL-01	EU AI Act	Art. 9(2)(d)	adopt targeted risk management measures for the identified risks	https://artificialintelligenceact.eu/article/9/	INFERRED
+CTL-02	EU AI Act	Art. 9(2)(d)	adopt targeted risk management measures for the identified risks	https://artificialintelligenceact.eu/article/9/	INFERRED
+CTL-03	EU AI Act	Art. 9(2)(d)	adopt targeted risk management measures for the identified risks	https://artificialintelligenceact.eu/article/9/	INFERRED
+R1	EU AI Act	Art. 9(5)	residual risk after measures must be judged acceptable; here residual score and accept refused above 9	https://artificialintelligenceact.eu/article/9/	INFERRED
+R2	EU AI Act	Art. 9(5)	residual risk after measures must be judged acceptable; here residual score and accept refused above 9	https://artificialintelligenceact.eu/article/9/	INFERRED
+R3	EU AI Act	Art. 9(5)	residual risk after measures must be judged acceptable; here residual score and accept refused above 9	https://artificialintelligenceact.eu/article/9/	INFERRED
+profile:intended_use	EU AI Act	Annex IV item 1(a)	intended purpose of the system; partial, provider name and system version are not recorded	https://artificialintelligenceact.eu/annex/4/	INFERRED
+profile:deployment	EU AI Act	Annex IV item 2(e)	assessment of human oversight measures; partial, deployment text only states a human reviewer is in the loop	https://artificialintelligenceact.eu/annex/4/	INFERRED
+evidence:decisions.csv	EU AI Act	Annex IV item 2(d)	data requirements and datasets; partial, a decision table and training manifest exist, no data provenance document	https://artificialintelligenceact.eu/annex/4/	INFERRED
+evidence:training_manifest.json	EU AI Act	Annex IV item 2(d)	data requirements and datasets; partial, a decision table and training manifest exist, no data provenance document	https://artificialintelligenceact.eu/annex/4/	INFERRED
+evidence:bias_report.json	EU AI Act	Annex IV item 2(g)	validation and testing procedures with performance metrics	https://artificialintelligenceact.eu/annex/4/	INFERRED
+evidence:leakage_report.json	EU AI Act	Annex IV item 2(g)	validation and testing procedures with performance metrics	https://artificialintelligenceact.eu/annex/4/	INFERRED
+evidence:injection_report.json	EU AI Act	Annex IV item 2(g)	validation and testing procedures with performance metrics	https://artificialintelligenceact.eu/annex/4/	INFERRED
+CTL-02	EU AI Act	Annex IV item 2(h)	cybersecurity measures; partial, output filter only	https://artificialintelligenceact.eu/annex/4/	INFERRED
+CTL-03	EU AI Act	Annex IV item 2(h)	cybersecurity measures; partial, input isolation only	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R1	EU AI Act	Annex IV item 3	foreseeable risks to health, safety and fundamental rights; partial, accuracy levels and input data specifications are not recorded	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R2	EU AI Act	Annex IV item 3	foreseeable risks to health, safety and fundamental rights; partial, accuracy levels and input data specifications are not recorded	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R3	EU AI Act	Annex IV item 3	foreseeable risks to health, safety and fundamental rights; partial, accuracy levels and input data specifications are not recorded	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R1	EU AI Act	Annex IV item 4	appropriateness of performance metrics; partial, the four-fifths rule and equal-opportunity gap are justified in README only	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R1	EU AI Act	Annex IV item 5	description of the risk management system under Article 9	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R2	EU AI Act	Annex IV item 5	description of the risk management system under Article 9	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R3	EU AI Act	Annex IV item 5	description of the risk management system under Article 9	https://artificialintelligenceact.eu/annex/4/	INFERRED
+R1	SOC 2 TSC	CC3.2	identify and analyse risks to objectives	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+R2	SOC 2 TSC	CC3.2	identify and analyse risks to objectives	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+R3	SOC 2 TSC	CC3.2	identify and analyse risks to objectives	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-01	SOC 2 TSC	CC4.1	ongoing or separate evaluations that controls are present and working	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-02	SOC 2 TSC	CC4.1	ongoing or separate evaluations that controls are present and working	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-03	SOC 2 TSC	CC4.1	ongoing or separate evaluations that controls are present and working	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-03	SOC 2 TSC	CC6.1	logical protections for information assets; partial, input isolation only, no access control model	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+R3	SOC 2 TSC	CC7.2	monitor components for anomalies; here recorded probe transcripts scored for unsafe responses	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+evidence:manifest.json	SOC 2 TSC	CC8.1	change management; partial, sha256 hashes detect altered evidence but no change approval flow exists	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+R2	SOC 2 TSC	C1.1	identify and protect confidential information	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-02	SOC 2 TSC	C1.1	identify and protect confidential information	https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022	INFERRED
+CTL-03	ISO 27001:2022 Annex A	A.5.15	rules for controlling access to information; partial, input isolation only	id only, standard is paywalled	INFERRED
+CTL-02	ISO 27001:2022 Annex A	A.8.11	masking of data; here an output PII filter	id only, standard is paywalled	INFERRED
+R2	ISO 27001:2022 Annex A	A.8.12	preventing data leakage	id only, standard is paywalled	INFERRED
+CTL-02	ISO 27001:2022 Annex A	A.8.12	preventing data leakage	id only, standard is paywalled	INFERRED
+evidence:transcript.jsonl	ISO 27001:2022 Annex A	A.8.15	keeping logs of activity; here recorded model transcripts	id only, standard is paywalled	INFERRED
+R3	ISO 27001:2022 Annex A	A.8.16	monitoring for anomalous behaviour; here scored probe transcripts	id only, standard is paywalled	INFERRED
+CTL-03	ISO 27001:2022 Annex A	A.8.16	monitoring for anomalous behaviour; here scored probe transcripts	id only, standard is paywalled	INFERRED
+R3	ISO 27001:2022 Annex A	A.8.29	security testing during development and acceptance; here recorded injection probes	id only, standard is paywalled	INFERRED
+evidence:manifest.json	ISO 27001:2022 Annex A	A.8.32	change management; partial, hashes detect altered evidence but no approval flow exists	id only, standard is paywalled	INFERRED
