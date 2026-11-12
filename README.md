@@ -1,5 +1,7 @@
 # ai-risk-register
 
+[![CI](https://github.com/mpuodziukas-labs/ai-risk-register/actions/workflows/ci.yml/badge.svg)](https://github.com/mpuodziukas-labs/ai-risk-register/actions/workflows/ci.yml)
+
 Proves: an engine that scores bias, data leakage and prompt injection risk for a synthetic AI system from runnable evidence, classifies its EU AI Act tier, writes a register with owner, treatment, inherent and residual score, maps every risk to NIST AI RMF, EU AI Act, ISO/IEC 42001 and OWASP LLM ids, and refuses on missing, stale, contradicted or tampered evidence. Verify in 60s: `python3 evaluate.py`
 
 ## The problem
@@ -113,6 +115,32 @@ REFUSED: 1 reason(s)
 - Expected results beside the cases. This keeps the evaluator simple and makes the consistency check cheap; the cost, stated above, is that it is not a generalization claim.
 - Mutants as the test of the tests. A passing suite proves little until a deliberately broken engine fails it.
 - No ISO clause ids emitted. The standard's text was not fetched, so the engine prints a "not verified" marker instead of an id it could not check.
+
+## Crosswalk
+
+`crosswalk.tsv` maps register ids (R1 to R3, CTL-01 to CTL-03, named evidence files, profile fields) to ISO/IEC 27001:2022 Annex A, SOC 2 Trust Services Criteria, Federal Reserve SR 11-7 and EU AI Act Article 9 and Annex IV. Columns: register id, framework, external id, paraphrased title, source URL, status. GROUNDED means the external id and its subject were read in a fetched source on 2026-11-05. INFERRED means the id was not confirmed from a fetched source. The status describes the external id, not how strong the fit is; titles say "partial" where the register covers only part of an item.
+
+| framework | GROUNDED | INFERRED |
+|---|---|---|
+| SR 11-7 (attachment sections V.1, V.2, V.3, VI) | 14 | 0 |
+| EU AI Act (Art. 9 and Annex IV) | 0 | 28 |
+| SOC 2 TSC | 0 | 11 |
+| ISO/IEC 27001:2022 Annex A | 0 | 9 |
+
+SOC 2: the AICPA download page was fetched but the criteria text sits in a PDF behind a free account, so no CC id was confirmed. ISO/IEC 27001: control ids only, standard is paywalled. EU AI Act: EUR-Lex blocks automated fetches, so ids and subjects were read from a secondary mirror of Regulation (EU) 2024/1689 (see `SOURCES.md`) and stay INFERRED until checked against the EUR-Lex text. SR 11-7: the attachment PDF was fetched from federalreserve.gov.
+
+Annex IV items the register does not cover (gaps): 1(b) to 1(h) (interaction with other systems, software versions, distribution forms, hardware, interface description, instructions for use), 2(a) development methods, 2(b) design specifications, 2(c) architecture and compute, 2(f) pre-determined changes, 6 lifecycle changes, 7 harmonised standards, 8 declaration of conformity, 9 post-market monitoring plan. Partial: 1(a), 2(d), 2(e), 2(h), 3 and 4. Article 9 paragraph 2(c) (post-market data) and the testing paragraphs 9(6) to 9(8) are not mapped.
+
+This is a mapping, not a compliance or certification claim.
+
+## Verify
+
+```
+bash scripts/verify.sh
+bash scripts/verify.sh --selftest
+```
+
+The first runs `evaluate.py` and requires `cases: 32/32 match`, then runs `crosswalk_check.py`, which requires every register id to exist, every row to carry a source URL and a valid status, and no row to use the words compliant, certified or attested. Exit 0 or 1. The second plants bad rows in a temporary copy and prints `selftest 3/3` when the clean copy passes and both planted rows fail. `shellcheck` is run on the script when installed.
 
 ## Honesty
 
